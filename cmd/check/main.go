@@ -33,6 +33,7 @@ import (
 )
 
 func main() {
+	fmt.Println("NIKO!")
 	logger := lager.NewLogger("http")
 	rECRRepo, err := regexp.Compile(`[a-zA-Z0-9][a-zA-Z0-9_-]*\.dkr\.ecr\.[a-zA-Z0-9][a-zA-Z0-9_-]*\.amazonaws\.com(\.cn)?[^ ]*`)
 	fatalIf("failed to compile ECR regex", err)
