@@ -14,7 +14,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/cihub/seelog"
+	//"github.com/cihub/seelog"
 	"github.com/pivotal-golang/lager"
 
 	ecr "github.com/awslabs/amazon-ecr-credential-helper/ecr-login"
@@ -46,7 +46,7 @@ func main() {
 	os.Setenv("AWS_SESSION_TOKEN", request.Source.AWSSessionToken)
 
 	// silence benign ecr-login errors/warnings
-	seelog.UseLogger(seelog.Disabled)
+	//seelog.UseLogger(seelog.Disabled)
 
 	if rECRRepo.MatchString(request.Source.Repository) == true {
 		ecrUser, ecrPass, err := ecr.ECRHelper{
